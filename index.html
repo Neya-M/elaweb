@@ -65,8 +65,8 @@ const page_img = document.getElementById("page_img");
 front = true;
 hold = false;
 function move() {
-	if hold {
-		if front {
+	if (hold) {
+		if (front) {
 			page_img.src = "https://github.com/Neya-M/elaweb/blob/main/images/flip_up.gif";
 			front = false;
 		} else {
