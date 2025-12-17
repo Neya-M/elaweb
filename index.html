@@ -2,10 +2,13 @@
 	<head>
 		<link rel="stylesheet" href="https://github.com/Neya-M/elaweb/blob/main/style.css" />
 	</head>
-	<body>
-		<button id="page" onclick="page()" class="page">
-			<img id="page_img" src="https://github.com/Neya-M/elaweb/blob/main/images/land.gif?raw=true"/>
-		</button>
+	<body style="background:black;">
+		<div style="display:flex;justify-content:center;align-items:center;margin-top:40%;">
+			<button id="page" onclick="page()" class="page" style="image-rendering:crisp-edges;border:none;background:none;
+			scale:15;">
+				<img id="page_img" src="https://github.com/Neya-M/elaweb/blob/main/images/land.gif?raw=true"/>
+			</button>
+		</div>
 		<h1 id="title" class="title">On the Nature of Good and Evil</h1>
 		<pre id="story" class="story">
 We had wandered in the dark woods for a while, trying to find the path. The map was not much use, since we couldn’t find any of the roads or places marked on it. We tried tracing the path back from the Nagual’s cave, but it only got us more lost, as the area was riddled with forks and paths long abandoned. We had been searching for about an hour when I noticed a pair of glowing blue eyes watching us from the trees. 
@@ -54,6 +57,29 @@ Works Cited
 McCall, Guadalupe. Summer of the Mariposas, TU Books, 2012, 46-49
 Burchell, Simon. Phantom Black Dogs in Latin America, Heart of Albion Press, 2007
 		</pre>
-		<script src="https://github.com/Neya-M/elaweb/blob/main/main.js"></script>
+		<script>
+const title = document.getElementById("title");
+const story = document.getElementById("story");
+const essay = document.getElementById("essay");
+const page_img = document.getElementById("page_img");
+front = true;
+hold = false;
+page() {
+	if hold {
+		if front {
+			page_img.src = "https://github.com/Neya-M/elaweb/blob/main/images/flip_up.gif";
+			front = false;
+		} else {
+			page_img.src = "https://github.com/Neya-M/elaweb/blob/main/images/flip_down.gif";
+			front = true;
+		}
+	} else {
+		hold = true;
+		page_img.src = "https://github.com/Neya-M/elaweb/blob/main/images/take.gif";
+	}
+}
+</script>
 	</body>
 </html>
+
+
