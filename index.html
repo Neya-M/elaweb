@@ -4,7 +4,7 @@
 	</head>
 	<body style="background:black;">
 		<div style="display:flex;justify-content:center;align-items:center;margin-top:40%;">
-			<button id="page" onclick="page()" class="page" style="image-rendering:crisp-edges;border:none;background:none;
+			<button id="page" onclick="move()" class="page" style="image-rendering:crisp-edges;border:none;background:none;
 			scale:15;">
 				<img id="page_img" src="https://github.com/Neya-M/elaweb/blob/main/images/land.gif?raw=true"/>
 			</button>
@@ -64,7 +64,7 @@ const essay = document.getElementById("essay");
 const page_img = document.getElementById("page_img");
 front = true;
 hold = false;
-page() {
+move() {
 	if hold {
 		if front {
 			page_img.src = "https://github.com/Neya-M/elaweb/blob/main/images/flip_up.gif";
