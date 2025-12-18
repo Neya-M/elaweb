@@ -8,7 +8,7 @@
 			</button>
 		</div>	
 		<div style="display: flex; align-items: center; justify-items: center; width: 50%; height: 100%; flex-flow: column;overflow:scroll;z-index:1;margin:auto;">
-			<h1 id="title" class="title" style="width:100%;">On the Nature of Good and Evil</h1>
+			<h1 id="title" class="title" style="width:60%;margin:auto;">On the Nature of Good and Evil</h1>
 			<pre id="story" class="story" style="width:50%;text-indent: 5%;white-space: pre-wrap;">
 We had wandered in the dark woods for a while, trying to find the path. The map was not much use, since we couldn’t find any of the roads or places marked on it. We tried tracing the path back from the Nagual’s cave, but it only got us more lost, as the area was riddled with forks and paths long abandoned. We had been searching for about an hour when I noticed a pair of glowing blue eyes watching us from the trees. 
 “Who’s there?” I asked nervously. A creature that I could only describe as a huge white wolf stepped out from the trees. It spoke. 
@@ -48,7 +48,7 @@ With the directions the Cadejo gave us, we started walking back to the original 
 			</pre>
 		</div>
 		<div>
-			<pre id="essay" class="essay" style="width:100%;text-indent: 5%;white-space: pre-wrap;">
+			<pre id="essay" class="essay" style="width:50%;text-indent: 5%;white-space: pre-wrap;">
 A Word from the Author
 The good and evil duo of the Cadejos are very widely known, protecting some and killing others. The black Cadejo is often portrayed as the evil one, while the white Cadejo is good and kind. The Cadejos are large and dog-like, and often appear to people at night. In my new scene for Summer of the Mariposas, I have kept most of the original El Cadejo’s traits so that people can see the original monster in it, but I also changed a few traits to show the theme that things are not always as they appear.
 The two representations are very similar. The Cadejos in my story are dog-like, just like the original Cadejos. When Odilia sees the Cadejos for the first time, she describes it as a huge wolf, similar to the original stories people told. Also like the original, there are two Cadejos, one good and one evil. When they meet Odilia and the sisters, they try to lead them in different directions. Juanita also says that one of them is good and the other is evil. In most of the original stories, the Cadejos appeared to people at night. Likewise, in my new scene, the sisters are traveling through the woods at night when the Cadejos appear to them. These similarities make it easier to recognize the monster as El Cadejo, while also setting up background for the key difference between the original and my new scene.
@@ -71,9 +71,11 @@ function move() {
 		if (front) {
 			page_img.src = "https://github.com/Neya-M/elaweb/blob/main/images/flip_up.gif?raw=true";
 			front = false;
+			essay.opacity = 0;
 		} else {
 			page_img.src = "https://github.com/Neya-M/elaweb/blob/main/images/flip_down.gif?raw=true";
 			front = true;
+			story.opacity = 0;
 		}
 	} else {
 		hold = true;
