@@ -2,8 +2,8 @@
 	<head>
 	</head>
 	<body style="background:black;overflow:hidden;">	
-		<div>
-			<div style="display: flex; align-items: center; justify-items: center; width: 50%; position: relative; height: 55%; top: 15%; left: 5%; flex-flow: column;overflow:scroll;z-index:1;margin:auto;">
+		<div id="texts" style="width:100%;height:100%;display:flex;align-items:center;flex-flow:column;">
+			<div id="story_div"style="display: flex; align-items: center; justify-items: center; width: 50%; position: relative; height: 70%; top: 15%; left: 5%; flex-flow: column;overflow:scroll;z-index:1;margin:auto;">
 				<h1 id="title" class="title" style="width:60%;margin:auto;">On the Nature of Good and Evil</h1>
 				<pre id="story" class="story" style="width:60%;text-indent: 5%;white-space: pre-wrap;">
 We had wandered in the dark woods for a while, trying to find the path. The map was not much use, since we couldn’t find any of the roads or places marked on it. We tried tracing the path back from the Nagual’s cave, but it only got us more lost, as the area was riddled with forks and paths long abandoned. We had been searching for about an hour when I noticed a pair of glowing blue eyes watching us from the trees. 
@@ -43,7 +43,7 @@ Then, I remembered why we were here. “Oh right! One more thing if you don’t 
 With the directions the Cadejo gave us, we started walking back to the original road. I thought about the two Cadejos, and how good and evil had reversed. I promised to myself that I would be just a little more forgiving of people who were unkind and hostile. Maybe they had been treated the same.			
 				</pre>
 			</div>
-			<div style="display: flex; align-items: center; justify-items: center; width: 50%; position: relative; height: 55%; top: 10%; left: 5%; flex-flow: column;overflow:scroll;z-index:1;margin:auto;">
+			<div id="essay-div" style="display: flex; align-items: center; justify-items: center; width: 50%; position: relative; height: 10%; top: 10%; left: 5%; flex-flow: column;overflow:scroll;z-index:1;margin:auto;">
 				<h1 style="width:60%;margin:auto;">A Word from the Author</h1>
 				<pre id="essay" class="essay" style="width:60%;text-indent: 5%;white-space: pre-wrap;">
 The good and evil duo of the Cadejos are very widely known, protecting some and killing others. The black Cadejo is often portrayed as the evil one, while the white Cadejo is good and kind. The Cadejos are large and dog-like, and often appear to people at night. In my new scene for Summer of the Mariposas, I have kept most of the original El Cadejo’s traits so that people can see the original monster in it, but I also changed a few traits to show the theme that things are not always as they appear.
@@ -62,9 +62,9 @@ Burchell, Simon. Phantom Black Dogs in Latin America, Heart of Albion Press, 200
 			</button>
 		</div>
 		<script>
-const title = document.getElementById("title");
-const story = document.getElementById("story");
-const essay = document.getElementById("essay");
+const texts = document.getElementById("texts");
+const story = document.getElementById("story_div");
+const essay = document.getElementById("essay_div");
 const page_img = document.getElementById("page_img");
 front = true;
 hold = false;
@@ -73,11 +73,19 @@ function move() {
 		if (front) {
 			page_img.src = "https://github.com/Neya-M/elaweb/blob/main/images/flip_up.gif?raw=true";
 			front = false;
-			essay.opacity = 0;
+			story.style.opacity = 1;
+			essay.style.opacity = 0;
+			essay.style.height = 10%;
+			story.style.height = 70%;
+			texts.style.flex-flow = column;
 		} else {
 			page_img.src = "https://github.com/Neya-M/elaweb/blob/main/images/flip_down.gif?raw=true";
 			front = true;
-			story.opacity = 0;
+			essay.style.opacity = 1;
+			story.style.opacity = 0;
+			story.style.height = 10%;
+			essay.style.height = 70%;
+			texts.style.flex-flow = column-reverse;
 		}
 	} else {
 		hold = true;
