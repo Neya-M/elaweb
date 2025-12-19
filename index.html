@@ -73,19 +73,19 @@ function move() {
 		if (front) {
 			page_img.src = "https://github.com/Neya-M/elaweb/blob/main/images/flip_up.gif?raw=true";
 			front = false;
-			essay.style.opacity = "0";
-			story.style.opacity = "1";
-			essay.style.width = "10vh";
-			story.style.width = "65vh";
-			texts.style.flexFlow = "column";
+			story.style.opacity = "0";
+			essay.style.opacity = "1";
+			story.style.height = "10vh";
+			essay.style.height = "65vh";
+			texts.style.flexFlow = "column-reverse";
 		} else {
 			page_img.src = "https://github.com/Neya-M/elaweb/blob/main/images/flip_down.gif?raw=true";
 			front = true;
-			story.style.opacity = "0";
-			essay.style.opacity = "1";
-			story.style.width = "10vh";
-			essay.style.width = "65vh";
-			texts.style.flexFlow = "column-reverse";
+			essay.style.opacity = "0";
+			story.style.opacity = "1";
+			essay.style.height = "10vh";
+			story.style.height = "65vh";
+			texts.style.flexFlow = "column";
 		}
 	} else {
 		hold = true;
